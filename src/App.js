@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { Download, Features, SectionWrapper, Footer } from "./components";
+import assets from "./assets";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SectionWrapper
+        title="Your own store of Nifty NFTs. Start Selling & Growing"
+        description="Buy, store, collect NFTs, exchange & earn crypto. Join the community of 25+ million people using ProNef Marketplace."
+        showBtn
+        mockupImg={assets.homeHero}
+        banner="banner"
+      />
+      <SectionWrapper
+        title="Smart User Interface Marketplace"
+        description="Experience a buttery UI of ProNef NFTs Marketplace! Smooth, constant colours of a fluet UI design."
+        mockupImg={assets.homeCards}
+        reverse
+      />
+      <Features />
+      <SectionWrapper
+        title="Deployment"
+        description="ProNef is built using Expo which run natively across all mobile devices. You can easily get your app into people's hands."
+        mockupImg={assets.feature}
+        reverse
+      />
+      <SectionWrapper
+        title="Creative way of showcase the store"
+        description="The App contains two screens. The first screen lists all NFTs while the second one shows the details of a specific NFT."
+        mockupImg={assets.mockup}
+        banner="banner02"
+      />
+      <Download />
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
